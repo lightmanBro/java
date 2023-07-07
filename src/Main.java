@@ -53,5 +53,8 @@ public class Main {
         ArrayList<Integer> phoneNumbers = new ArrayList<Integer>();
         phoneNumbers.add(123);
         phoneNumbers.add(190);
+        phoneNumbers.set(0,124);
+//        phoneNumbers.remove();
+//        phoneNumbers.clear();
     }
 }
