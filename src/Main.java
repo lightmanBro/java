@@ -10,22 +10,22 @@ public class Main {
         // IntelliJ IDEA suggests fixing it.
         System.out.printf("Hello and welcome!");
         Scanner scanner = new Scanner(System.in);
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-//        for (int i = 1; i <= 5; i++) {
-//
-//            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-//            // for you, but you can always add more by pressing Ctrl+F8.
-//            System.out.println("i = " + i);
-//        }
+
 //        System.out.println("What is your name");
 //        String name = scanner.nextLine();
 //        System.out.println(name);
 //        System.out.println(name+" How old are you?");
 //        int age = scanner.nextInt();
 //        System.out.println(name+" you are "+age+" years old");
-        String name = JOptionPane.showInputDialog("Enter your name");
-        int age = Integer.parseInt(JOptionPane.showInputDialog("Enter your age"));
-        JOptionPane.showMessageDialog(null,"Hello "+ name+" you are "+age+" years old");
+
+        //GUI
+//        String name = JOptionPane.showInputDialog("Enter your name");
+//        int age = Integer.parseInt(JOptionPane.showInputDialog("Enter your age"));
+//        JOptionPane.showMessageDialog(null,"Hello "+ name+" you are "+age+" years old");
+
+
+        //Calling the other method attached to this class;
+        attachedMethod();
 
 //        Logical operators in java
 //        if(name.equals("David")){
@@ -49,12 +49,57 @@ public class Main {
         int[] quantity = {1,2,4,12,5};
         System.out.println(people[0]);
 
-        //Array list
+
         ArrayList<Integer> phoneNumbers = new ArrayList<Integer>();
         phoneNumbers.add(123);
         phoneNumbers.add(190);
         phoneNumbers.set(0,124);
 //        phoneNumbers.remove();
 //        phoneNumbers.clear();
+
+        //2D ArrayLists
+        ArrayList<ArrayList<String>> schoolStudents = new ArrayList<>();
+        //Array list
+        ArrayList<String> students = new ArrayList<>();
+        students.add("Joy Adeboye");
+        students.add("Seun Oyaleke");
+        ArrayList<String> studentClass = new ArrayList<>();
+        studentClass.add("Primary One");
+        studentClass.add("Primary Five");
+
+        schoolStudents.add(students);
+        schoolStudents.add(studentClass);
+        System.out.println(schoolStudents.get(1).get(0));
+
+
+        //For each loop
+        for (String child: students) {
+            System.out.println(child);
+        }
+    }
+
+
+    //METHODS ATTACHED TO A CLASS
+    static void attachedMethod(){
+        System.out.println("\nHello from the method attached to this main method");
+        System.out.println(add(3,8));
+    }
+    static int add(int x,int y){
+        return x+y;
+    }
+
+
+    //Overloaded methods = methods that share the same name but have different parameters;
+    static  int multiply(int a,int b){
+        System.out.println("Overloaded method 1");
+        return a*b;
+    }
+    static int multiply(int a,int b,int c){
+        System.out.println("Overloaded method 2");
+        return a*b*c;
+    }
+    static double multiply(double a,double b,double c){
+        System.out.println("Overloaded method 3");
+        return a*b*c;
     }
 }
