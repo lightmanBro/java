@@ -11,6 +11,30 @@ public class Main {
         System.out.printf("Hello and welcome!");
         Scanner scanner = new Scanner(System.in);
 
+
+        Car ford = new Car();
+        ford.carDetails();
+        Car newCar = new Car("car","4","Toyota","Hilux","2021","Milk",45072.00);
+        Car Benz = new Car("Car","4","Benz","Gwagon","2021","blak",145072.00);
+        newCar.carDetails();
+
+
+        //Arrays of Objects;
+        Food food1 = new Food("Rice");
+        Food food2 = new Food("Beans");
+        Food food3 = new Food("Macaroni");
+
+        Food[] refrigrator = {food1,food2,food3};
+        System.out.println(food1.name);
+        System.out.println(refrigrator[0].name);
+        System.out.println(refrigrator[1].name);
+        System.out.println(refrigrator[2].name);
+
+        //Passing Object into a class;
+        Garage myGarage = new Garage();
+        myGarage.park(ford);
+        System.out.println(Car.carCount);
+        Car.displayCars();
 //        System.out.println("What is your name");
 //        String name = scanner.nextLine();
 //        System.out.println(name);
@@ -76,6 +100,8 @@ public class Main {
         for (String child: students) {
             System.out.println(child);
         }
+        //The final keyword makes it impossible to change a variable value;
+        final int finalNumber = 10;
     }
 
 
